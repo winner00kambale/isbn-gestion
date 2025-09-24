@@ -30,21 +30,10 @@
                                         <select name="promotion_id" class="form-select" required>
                                             <option value="">-- Sélectionner --</option>
                                             @foreach ($promotions as $promo)
-                                                <option value="{{ $promo->id }}">{{ $promo->designation }}</option>
+                                                <option value="{{ $promo->id }}">{{ $promo->designation }} {{ $promo->option->designation }}</option>
                                             @endforeach
                                         </select>
                                     </div>
-
-                                    <div class="mb-3">
-                                        <label>Option</label>
-                                        <select name="option_id" class="form-select" required>
-                                            <option value="">-- Sélectionner --</option>
-                                            @foreach ($options as $opt)
-                                                <option value="{{ $opt->id }}">{{ $opt->designation }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-
                                     <div class="mb-3">
                                         <label>Type de frais</label>
                                         <select name="type_id" class="form-select" required>
@@ -54,7 +43,6 @@
                                             @endforeach
                                         </select>
                                     </div>
-
                                     <button type="submit" class="btn btn-success">Générer le PDF</button>
                                 </form>
                             </div>

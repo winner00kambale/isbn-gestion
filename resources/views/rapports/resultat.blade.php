@@ -9,11 +9,14 @@
             text-align: center;
             margin-bottom: 20px;
         }
+
         .header img {
-            width: 100px; /* tu peux ajuster la taille */
+            width: 100px;
+            /* tu peux ajuster la taille */
             height: auto;
             margin-bottom: 10px;
         }
+
         body {
             font-family: DejaVu Sans, sans-serif;
             font-size: 12px;
@@ -96,7 +99,7 @@
                 <th>Id</th>
                 <th>Nom</th>
                 <th>Promotion et Option</th>
-                <th>Montant à payer</th>
+                <th>Frais à payer</th>
             </tr>
         </thead>
         <tbody>
@@ -106,7 +109,7 @@
                     <td>{{ $np->etudiant->nom ?? '' }} {{ $np->etudiant->postnom ?? '' }}
                         {{ $np->etudiant->prenom ?? '' }}</td>
                     <td>{{ $np->promotion->designation ?? '' }} {{ $np->promotion->option->designation ?? '' }}</td>
-                    <td>{{ $montantAttendu ?? '' }} $</td>
+                    <td>{{ $montantAp }} $</td>
                 </tr>
             @empty
                 <tr>

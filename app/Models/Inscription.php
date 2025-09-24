@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Inscription extends Model
 {
-    protected $fillable =[
+    protected $fillable = [
         'code_etudiant',
         'code_promotion',
         'code_annee'
@@ -31,5 +31,10 @@ class Inscription extends Model
     public function payements()
     {
         return $this->hasMany(Payement::class, 'code_inscription');
+    }
+
+    public function modalites()
+    {
+        return $this->hasMany(Modalite::class, 'code_promotion', 'code_promotion');
     }
 }
