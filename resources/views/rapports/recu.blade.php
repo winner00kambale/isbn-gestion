@@ -134,7 +134,7 @@
         </div>
         <div class="details">
             <div class="detail-line">
-                <p>Payé par: Mr./Mme <span>{{ $payement->inscription->etudiant->nom }} {{ $payement->inscription->etudiant->postnom }} {{ $payement->inscription->etudiant->prenom }}</span>  <span>{{ $payement->inscription->promotion->designation }}</span> {{ $payement->inscription->promotion->option->designation }}</span></p>
+                <p>Payé par: Mr./Mme <span>{{ $payement->inscription->etudiant->nom }} {{ $payement->inscription->etudiant->postnom }} {{ $payement->inscription->etudiant->prenom }}</span>  / <span>{{ $payement->inscription->promotion->designation }}</span> {{ $payement->inscription->promotion->option->designation }}</span></p>
             </div>
             <div class="detail-line">
                 <p>MONTANT <span>{{ number_format($payement->montant_chiffre, 0, ',', ' ') }} $</span></p>

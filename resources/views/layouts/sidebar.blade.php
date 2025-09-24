@@ -42,7 +42,10 @@
                         <a href="{{ route('payements.index') }}">Payement</a>
                     </li>
                     <li>
-                        <a href="{{ route('type.index') }}">Type frais</a>
+                        <a href="{{ route('type.index') }}">Type des frais</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('modalite.index') }}">Modalité Payement</a>
                     </li>
                 </ul>
             </li>
@@ -68,7 +71,7 @@
                 </ul>
             </li>
             <li>
-                <a href="{{ route('rapport.index') }}">
+                <a href="{{ route('rapport.selection') }}">
                     <i class="fs-3 bi bi-bookmarks-fill"></i>
                     <span class="menu-text">Rapports</span>
                 </a>

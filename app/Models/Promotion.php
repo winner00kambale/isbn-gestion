@@ -12,4 +12,9 @@ class Promotion extends Model
     {
         return $this->belongsTo(Option::class, 'code_option');
     }
+
+    public function inscriptions()
+    {
+        return $this->hasMany(Inscription::class, 'code_promotion');
+    }
 }

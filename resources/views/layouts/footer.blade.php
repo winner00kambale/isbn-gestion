@@ -1,3 +1,3 @@
  <div class="app-footer">
-     <span>© Winner's Tech 2025</span>
+     <span>© ISBN/BENI 2025</span>
  </div>

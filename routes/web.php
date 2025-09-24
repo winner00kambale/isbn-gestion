@@ -5,6 +5,7 @@ use App\Http\Controllers\auth\AuthController;
 use App\Http\Controllers\dashboard\DashController;
 use App\Http\Controllers\Etudiant\EtudiantController;
 use App\Http\Controllers\Isncription\InscriptionController;
+use App\Http\Controllers\Modalite\ModaliteController;
 use App\Http\Controllers\Option\OptionController;
 use App\Http\Controllers\Payement\PayementController;
 use App\Http\Controllers\Promotion\PromotionController;
@@ -84,4 +85,17 @@ Route::controller(RapportController::class)->group(function(){
     Route::get('/rapport-journal','journal')->name('rapport.journal');
 });
 
-Route::get('/payements/{id}/recu', [PayementController::class, 'recu'])->name('payements.recu');
+Route::get('/payements/{id}/recu', [PayementController::class, 'recu'])
+    ->middleware('auth')
+    ->name('payements.recu');
+
+Route::controller(ModaliteController::class)->group(function(){
+    Route::get('/modalite-index','index')->name('modalite.index');
+    Route::get('/modalite-form','create')->name('modalite.form');
+    Route::post('/modalite.store','store')->name('modalite.store');
+    Route::get('/modalite/{id}/edit', 'edit')->name('modalite.edit');
+    Route::put('/modalite/{id}','update')->name('modalite.update');
+});
+
+Route::get('/rapport/selection', [RapportController::class, 'selectionForm'])->name('rapport.selection');
+Route::post('/rapport/resultat', [RapportController::class, 'generate'])->name('rapport.generate');

@@ -27,33 +27,6 @@
                         @csrf
                         <div class="card-body">
                             <div class="row gx-3">
-                                <!-- Montant en chiffres -->
-                                <div class="col-lg-4 col-sm-6 col-12">
-                                    <div class="mb-3">
-                                        <label class="form-label">Montant (en chiffres)</label>
-                                        <input type="number" name="montant_chiffre" step="0.01"
-                                            value="{{ old('montant_chiffre') }}"
-                                            class="form-control @error('montant_chiffre') is-invalid @enderror" required>
-                                        @error('montant_chiffre')
-                                            <div class="invalid-feedback">{{ $message }}</div>
-                                        @enderror
-                                    </div>
-                                </div>
-
-                                <!-- Montant en lettres -->
-                                <div class="col-lg-8 col-sm-6 col-12">
-                                    <div class="mb-3">
-                                        <label class="form-label">Montant (en lettres)</label>
-                                        <input type="text" name="montant_lettre" value="{{ old('montant_lettre') }}"
-                                            class="form-control @error('montant_lettre') is-invalid @enderror" required>
-                                        @error('montant_lettre')
-                                            <div class="invalid-feedback">{{ $message }}</div>
-                                        @enderror
-                                    </div>
-                                </div>
-
-                                <!-- Type de frais -->
-
                                 <!-- Inscription -->
                                 <div class="col-lg-4 col-sm-6 col-12">
                                     <div class="mb-3">
@@ -107,6 +80,32 @@
                                         @enderror
                                     </div>
                                 </div>
+                                <!-- Montant en chiffres -->
+                                <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="mb-3">
+                                        <label class="form-label">Montant (en chiffres)</label>
+                                        <input type="number" name="montant_chiffre" step="0.01"
+                                            value="{{ old('montant_chiffre') }}"
+                                            class="form-control @error('montant_chiffre') is-invalid @enderror" required>
+                                        @error('montant_chiffre')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <!-- Montant en lettres -->
+                                <div class="col-lg-8 col-sm-6 col-12">
+                                    <div class="mb-3">
+                                        <label class="form-label">Montant (en lettres)</label>
+                                        <input type="text" name="montant_lettre" value="{{ old('montant_lettre') }}"
+                                            class="form-control @error('montant_lettre') is-invalid @enderror" required>
+                                        @error('montant_lettre')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <!-- Type de frais -->
                             </div>
                         </div>
 

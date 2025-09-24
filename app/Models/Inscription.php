@@ -27,4 +27,9 @@ class Inscription extends Model
     {
         return $this->belongsTo(Annee::class, 'code_annee');
     }
+
+    public function payements()
+    {
+        return $this->hasMany(Payement::class, 'code_inscription');
+    }
 }

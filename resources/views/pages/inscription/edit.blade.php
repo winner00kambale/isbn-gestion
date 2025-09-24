@@ -46,7 +46,7 @@
                             <!-- Promotion -->
                             <div class="col-lg-4 col-sm-6 col-12">
                                 <div class="mb-3">
-                                    <label class="form-label">Promotion</label>
+                                    <label class="form-label">Promotion et Option</label>
                                     <select name="code_promotion" class="form-select" required>
                                         <option value="">-- Sélectionner --</option>
                                         @foreach ($promotions as $promotion)
