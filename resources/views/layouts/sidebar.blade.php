@@ -52,7 +52,7 @@
             <li class="treeview">
                 <a href="#!">
                     <i class="bi bi-gear"></i>
-                    <span class="menu-text">Paramèttre</span>
+                    <span class="menu-text">Paramèttres</span>
                 </a>
                 <ul class="treeview-menu">
                     <li>
